@@ -1,9 +1,11 @@
 package com.imbytecat.functionalboot.config
 
-import org.springframework.context.support.GenericApplicationContext
+import com.imbytecat.functionalboot.handler.HelloHandler
 import org.springframework.context.support.beans
 
 val beans = beans {
+    bean<HelloHandler>()
+
     bean {
         appRouter(ref())
     }
